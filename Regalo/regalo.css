@@ -125,6 +125,18 @@ h1 {
     }
 }
 
+@keyframes drift-mobile {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(1.4deg);
+    }
+    100% {
+        transform: translateY(10px) rotate(-1.4deg);
+    }
+}
+
 @media (max-width: 760px) {
     body {
         overflow: auto;
@@ -144,8 +156,8 @@ h1 {
     }
 
     .photo-card {
-        animation: none;
-        transform: none;
+        animation: drift-mobile 3s ease-in-out infinite alternate;
+        transform: translate3d(0, 0, 0);
     }
 
     .photo-frame {

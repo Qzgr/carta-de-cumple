@@ -19,7 +19,7 @@ function appendName(message) {
 	let messageBox = document.getElementById("message_container");
 	if (messageBox == null) return;
 
-	messageBox.innerHTML = `Feliz cumpleaños, ${message != null ? message : "Oprime la flama de las velas para apagarla y abrir tu regalo"}`;
+	messageBox.innerHTML = `Feliz cumpleaños, ${message != null ? message : "Oprime la vela para apagarla y abrir tu regalo"}`;
 }
 
 function appendCandles(candlesCount) {
