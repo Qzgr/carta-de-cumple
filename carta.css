@@ -32,8 +32,28 @@
   text-shadow: 0 0 12px rgba(255, 61, 138, 0.55);
 }
 
-#card p {
+.regalo-link {
+  color: #ffb6dd;
+  text-shadow: none;
   font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
+}
+
+.regalo-link a {
+  color: #ffb6dd;
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.regalo-link a:hover {
+  color: #ffb6dd;
+}
+
+#card p:not(.regalo-link) {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: normal;
   font-size: 1.15em;
   line-height: 1.45;
   text-align: left;
@@ -51,7 +71,6 @@
   box-sizing: border-box;
   border: 1px solid var(--line);
   box-shadow: 0 0 25px rgba(155, 77, 255, 0.18);
-  backdrop-filter: blur(12px);
 }
 
 .side.one {
