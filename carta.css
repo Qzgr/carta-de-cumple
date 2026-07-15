@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento&family=Parisienne&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #06070d;
+  --panel: rgba(12, 16, 28, 0.9);
+  --pink: #ff3d8a;
+  --purple: #9b4dff;
+  --cyan: #37e8ff;
+  --text: #ffe7f5;
+  --line: rgba(255, 255, 255, 0.14);
+}
+
+#card {
+  height: 500px;
+  width: 800px;
+  margin: 5em auto;
+  position: fixed;
+  top: auto;
+  left: auto;
+  transform: translateX(-50%);
+  display: flex;
+  visibility: hidden;
+  z-index: 10;
+}
+
+#card h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 2.7em;
+  margin: 0 0 0.8rem;
+  color: var(--pink);
+  text-align: center;
+  text-shadow: 0 0 12px rgba(255, 61, 138, 0.55);
+}
+
+#card p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15em;
+  line-height: 1.45;
+  text-align: left;
+  padding: 0 8px 0 10px;
+  margin: 0 0 0.9rem;
+  color: var(--text);
+  text-shadow: 0 0 8px rgba(55, 232, 255, 0.12);
+}
+
+.side {
+  background: rgba(255, 255, 255, 0.08);
+  min-height: 480px;
+  width: 50%;
+  padding: 24px 22px;
+  box-sizing: border-box;
+  border: 1px solid var(--line);
+  box-shadow: 0 0 25px rgba(155, 77, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.side.one {
+  width: 40%;
+  transform: skew(8deg, 16deg);
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05) 40%, rgba(20,24,41,0.9));
+}
+
+.side.two {
+  width: 60%;
+  transform: skew(8deg, -12deg);
+  background: linear-gradient(-90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05) 40%, rgba(15,19,33,0.95));
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Sacramento', cursive;
+  background:
+    radial-gradient(circle at top left, rgba(255, 61, 138, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(55, 232, 255, 0.16), transparent 32%),
+    linear-gradient(135deg, #02030a 0%, #080b16 45%, #0f1428 100%);
+  overflow: hidden;
+  color: var(--text);
+  margin: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0, transparent 60%);
+  pointer-events: none;
+}
+
+.valentines-day {
+  position: relative;
+  cursor: pointer;
+  filter: drop-shadow(0 0 18px rgba(255, 61, 138, 0.25));
+}
+
+.envelope {
+  position: relative;
+  filter: drop-shadow(0 0 20px rgba(155, 77, 255, 0.35));
+}
+
+.envelope:before {
+  content: "";
+  position: absolute;
+  width: 254px;
+  height: 254px;
+  background: linear-gradient(135deg, #ff3d8a 0%, #8b2be2 100%);
+  transform: rotate(-45deg);
+  border-radius: 0 15px 0 0;
+  left: -37px;
+  top: -82px;
+  box-shadow: inset 0 0 18px rgba(255,255,255,0.24);
+}
+
+.envelope:after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(90deg, #ff4f97 0%, #8b2be2 100%);
+  width: 360px;
+  height: 225px;
+  left: -90px;
+  top: 45px;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
+}
+
+.heart {
+  position: relative;
+  background: linear-gradient(135deg, #ff4fa3 0%, #ff1d6b 100%);
+  display: inline-block;
+  height: 180px;
+  top: 50px;
+  left: 0;
+  transform: rotate(-45deg);
+  width: 180px;
+  filter: drop-shadow(0 -10px 25px rgba(255, 61, 138, 0.35));
+  transition: 0.5s;
+}
+
+.heart:before, .heart:after {
+  content: "";
+  background: linear-gradient(135deg, #ff4fa3 0%, #ff1d6b 100%);
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+}
+
+.heart:before {
+  top: -100px;
+  left: 0;
+}
+
+.heart:after {
+  left: 100px;
+  top: 0;
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-right: 190px solid rgba(255, 255, 255, 0.16);
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top: 44px;
+  left: 80px;
+  z-index: 4;
+}
+
+.front:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 190px solid rgba(255, 255, 255, 0.16);
+  border-top: 113px solid transparent;
+  border-bottom: 113px solid transparent;
+  top: -113px;
+  left: -170px;
+}
+
+.front:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  content: "";
+  border-bottom: 150px solid rgba(255,255,255,0.08);
+  border-right: 180px solid transparent;
+  border-left: 180px solid transparent;
+  top: -36px;
+  left: -170px;
+}
+
+.text {
+  position: absolute;
+  font-family: arial;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  top: 80px;
+  left: 15px;
+  transition: 0.5s;
+  text-shadow: 0 0 10px rgba(55, 232, 255, 0.35);
+}
+
+.valentines-day:hover .heart {
+  transform: translateY(-50px) rotate(-45deg);
+}
+
+.valentines-day:hover .text {
+  transform: translateY(-50px);
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(30px); }
+}
