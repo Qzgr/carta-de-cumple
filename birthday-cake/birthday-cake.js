@@ -19,7 +19,7 @@ function appendName(message) {
 	let messageBox = document.getElementById("message_container");
 	if (messageBox == null) return;
 
-	messageBox.innerHTML = `Happy Birthday ${message != null ? message : "to you!"}`;
+	messageBox.innerHTML = `Feliz cumpleaños, ${message != null ? message : "Oprime la flama de las velas para apagarla y abrir tu regalo"}`;
 }
 
 function appendCandles(candlesCount) {
@@ -45,6 +45,24 @@ function appendCandles(candlesCount) {
 	}
 }
 
+function allCandlesAreOut() {
+	let candles = document.getElementsByClassName("candle");
+	if (candles == null || candles == 'undefined') return false;
+
+	for (var i = 0; i < candles.length; i++) {
+		let candle = candles[i];
+		if (candle.querySelector(".flame") != null) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function openGiftPage() {
+	window.location.href = "../Regalo/index-regalo.html";
+}
+
 function putOutCandle(candle_name) {
 	if (candle_name == null) return;
 
@@ -56,6 +74,10 @@ function putOutCandle(candle_name) {
 		if (flame != null) {
 			flame.remove();
 		}
+	}
+
+	if (allCandlesAreOut()) {
+		setTimeout(openGiftPage, 250);
 	}
 }
 

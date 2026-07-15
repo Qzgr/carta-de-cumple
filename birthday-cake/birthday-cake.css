@@ -121,17 +121,18 @@ body {
 
 .candle {
 	position: absolute;
-	width: 18px;
-	height: 100px;
+	width: 28px;
+	height: 110px;
 	top: 50%;
 	left: 50%;
-	margin-top: -325px;
-	margin-left: -10px;
+	margin-top: -335px;
+	margin-left: -14px;
 	background: #ffffff;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	z-index: 5;
-	
+	cursor: pointer;
+	touch-action: manipulation;
 }
 
 .candle:after,
@@ -158,12 +159,12 @@ body {
 .flame {
 	border-radius: 100%;
 	position: relative;
-	width: 7px;
-	height: 18px;
+	width: 10px;
+	height: 24px;
 	top: 0px;
 	left: 50%;
-	margin-left: -3.2px;
-	margin-top: -18px;
+	margin-left: -5px;
+	margin-top: -20px;
 }
 .flame:nth-child(1) {
 	animation: flame 2s 0s infinite;
