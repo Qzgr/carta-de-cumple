@@ -60,22 +60,23 @@ h1 {
 
 .collage-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
     gap: 18px;
+    align-items: start;
 }
 
 .photo-card {
-    animation: drift 14s ease-in-out infinite alternate;
+    animation: drift 16s ease-in-out infinite alternate;
     transform: translate3d(0, 0, 0);
     will-change: transform;
 }
 
-.card-1 { animation-duration: 15s; }
-.card-2 { animation-duration: 16s; animation-delay: -2s; }
-.card-3 { animation-duration: 14s; animation-delay: -4s; }
-.card-4 { animation-duration: 17s; animation-delay: -1s; }
-.card-5 { animation-duration: 15s; animation-delay: -3s; }
-.card-6 { animation-duration: 16s; animation-delay: -5s; }
+.card-1 { animation-duration: 4s; }
+.card-2 { animation-duration: 4s; animation-delay: -2s; }
+.card-3 { animation-duration: 4s; animation-delay: -4s; }
+.card-4 { animation-duration: 4s; animation-delay: -1s; }
+.card-5 { animation-duration: 4s; animation-delay: -3s; }
+.card-6 { animation-duration: 4s; animation-delay: -5s; }
 
 .photo-frame {
     position: relative;
@@ -129,13 +130,26 @@ h1 {
         overflow: auto;
     }
 
-    .collage-grid {
-        grid-template-columns: repeat(2, minmax(150px, 1fr));
+    .gift-page {
+        padding: 14px;
     }
-}
 
-@media (max-width: 480px) {
+    .collage-shell {
+        padding: 20px 14px 22px;
+    }
+
     .collage-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .photo-card {
+        animation: none;
+        transform: none;
+    }
+
+    .photo-frame {
+        padding: 10px 10px 16px;
+        transform: rotate(0deg);
     }
 }
