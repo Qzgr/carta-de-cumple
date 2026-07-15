@@ -108,7 +108,7 @@ body::before {
   pointer-events: none;
 }
 
-.valentines-day {
+.birthday-surprise {
   position: relative;
   cursor: pointer;
   filter: drop-shadow(0 0 18px rgba(255, 61, 138, 0.25));
@@ -224,11 +224,11 @@ body::before {
   text-shadow: 0 0 10px rgba(55, 232, 255, 0.35);
 }
 
-.valentines-day:hover .heart {
+.birthday-surprise:hover .heart {
   transform: translateY(-50px) rotate(-45deg);
 }
 
-.valentines-day:hover .text {
+.birthday-surprise:hover .text {
   transform: translateY(-50px);
 }
 
